@@ -1,4 +1,4 @@
-**Business Understanding**
+# Business Understanding
 Tujuan utama dari analisis data ini adalah untuk membantu BPJS Kesehatan dalam meningkatkan efisiensi dan efektivitas pelayanan kesehatan melalui prediksi jenis kunjungan peserta di fasilitas kesehatan tingkat pertama (FKTP). 
 Dengan prediksi yang tepat, BPJS Kesehatan dapat mengidentifikasi apakah kunjungan peserta bersifat preventif (sehat) atau untuk penanganan penyakit (sakit). 
 Informasi ini memungkinkan BPJS dan FKTP untuk merencanakan sumber daya yang lebih optimal dan mengalokasikan tenaga medis, obat-obatan, serta peralatan sesuai kebutuhan nyata di lapangan.

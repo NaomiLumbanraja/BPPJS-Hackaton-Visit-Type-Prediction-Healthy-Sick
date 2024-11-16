@@ -4,7 +4,7 @@ Dengan prediksi yang tepat, BPJS Kesehatan dapat mengidentifikasi apakah kunjung
 Informasi ini memungkinkan BPJS dan FKTP untuk merencanakan sumber daya yang lebih optimal dan mengalokasikan tenaga medis, obat-obatan, serta peralatan sesuai kebutuhan nyata di lapangan.
 
 Segmentasi peserta ini diharapkan dapat memberikan manfaat bisnis yang signifikan, termasuk:
-1.	Mmengurangi potensi kelebihan atau kekurangan sumber daya dengan mengetahui jenis kunjungan yang akan datang, BPJS dan FKTP dapat menyiapkan tenaga medis, ruangan, dan peralatan yang sesuai untuk memenuhi kebutuhan peserta.
+1.	Mengurangi potensi kelebihan atau kekurangan sumber daya dengan mengetahui jenis kunjungan (Sakit/Sehat) yang akan datang, BPJS dan FKTP dapat menyiapkan tenaga medis, ruangan, dan peralatan yang sesuai untuk memenuhi kebutuhan peserta.
 2.	Prediksi jenis kunjungan membantu FKTP memberikan pelayanan yang lebih cepat dan tepat. Kunjungan sehat mungkin membutuhkan pendekatan preventif, sedangkan kunjungan untuk penanganan penyakit membutuhkan pelayanan lebih intensif.
 3.	Dengan mengetahui kebutuhan secara akurat, BPJS dapat mengalokasikan anggaran yang lebih efektif, misalnya dengan mengurangi pengeluaran untuk fasilitas preventif saat terjadi peningkatan kunjungan sakit, atau sebaliknya.
 Hasil dari prediksi jenis kunjungan akan memberikan data yang berharga untuk evaluasi dan pengambilan keputusan yang lebih strategis di masa mendatang, misalnya dalam hal kampanye kesehatan preventif atau peningkatan layanan untuk penyakit tertentu.

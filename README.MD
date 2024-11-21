@@ -2,10 +2,12 @@
 Tujuan utama dari analisis data ini adalah untuk membantu BPJS Kesehatan dalam meningkatkan efisiensi dan efektivitas pelayanan kesehatan melalui prediksi jenis kunjungan peserta di fasilitas kesehatan tingkat pertama (FKTP). 
 
 Segmentasi peserta ini diharapkan dapat memberikan manfaat bisnis yang signifikan, termasuk:
-1.	Mengurangi potensi kelebihan atau kekurangan sumber daya dengan mengetahui jenis kunjungan (Sakit/Sehat) yang akan datang, BPJS dan FKTP dapat menyiapkan tenaga medis, ruangan, dan peralatan yang sesuai untuk memenuhi kebutuhan peserta.
-2.	Prediksi jenis kunjungan membantu FKTP memberikan pelayanan yang lebih cepat dan tepat. Kunjungan sehat mungkin membutuhkan pendekatan preventif, sedangkan kunjungan untuk penanganan penyakit membutuhkan pelayanan lebih intensif.
-3.	Dengan mengetahui kebutuhan secara akurat, BPJS dapat mengalokasikan anggaran yang lebih efektif, misalnya dengan mengurangi pengeluaran untuk fasilitas preventif saat terjadi peningkatan kunjungan sakit, atau sebaliknya.
-Hasil dari prediksi jenis kunjungan akan memberikan data yang berharga untuk evaluasi dan pengambilan keputusan yang lebih strategis di masa mendatang, misalnya dalam hal kampanye kesehatan preventif atau peningkatan layanan untuk penyakit tertentu. Adapun metodologi proyek akan dikerjakan dengan menggunakan struktur CRISP-DM, diantaranya:
+- Mengurangi potensi kelebihan atau kekurangan sumber daya dengan mengetahui jenis kunjungan (Sakit/Sehat) yang akan datang, BPJS dan FKTP dapat menyiapkan tenaga medis, ruangan, dan peralatan yang sesuai untuk memenuhi kebutuhan peserta.
+- Prediksi jenis kunjungan membantu FKTP memberikan pelayanan yang lebih cepat dan tepat. Kunjungan sehat mungkin membutuhkan pendekatan preventif, sedangkan kunjungan untuk penanganan penyakit membutuhkan pelayanan lebih intensif.
+- Dengan mengetahui kebutuhan secara akurat, BPJS dapat mengalokasikan anggaran yang lebih efektif, misalnya dengan mengurangi pengeluaran untuk fasilitas preventif saat terjadi peningkatan kunjungan sakit, atau sebaliknya.
+Hasil dari prediksi jenis kunjungan akan memberikan data yang berharga untuk evaluasi dan pengambilan keputusan yang lebih strategis di masa mendatang, misalnya dalam hal kampanye kesehatan preventif atau peningkatan layanan untuk penyakit tertentu. 
+
+Adapun metodologi proyek akan dikerjakan dengan menggunakan struktur CRISP-DM, diantaranya:
 1. Data Understanding
 2. Data Prepraration
 3. Modeling 

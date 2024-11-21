@@ -14,6 +14,7 @@ Adapun metodologi proyek akan dikerjakan dengan menggunakan struktur CRISP-DM, d
 4. Model Evaluation
 5. Deployment 
 6. Evaluation 
+
 Dalam proyek ini, algoritma Gradient Boosting (XGBoost) akan digunakan untuk membangun model klasifikasi jenis kunjungan berdasarkan fitur-fitur seperti diagnosis (ICD-10), 
 jenis fasilitas kesehatan, pola rujukan, dan riwayat kunjungan. Model ini diharapkan mampu memprediksi jenis kunjungan dengan akurasi tinggi, sehingga BPJS Kesehatan dan FKTP dapat melakukan perencanaan pelayanan kesehatan yang lebih tepat sasaran.
 

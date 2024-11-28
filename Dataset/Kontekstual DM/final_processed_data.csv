@@ -1,4 +1,4 @@
-Provinsi,Jenis_Poliklinik,Status_Pulang_Peserta,Kode_Diagnosis,Nama_Diagnosis,Kode_Diagnosis_Detail,Nama_Diagnosis_Detail,Jenis_Kunjungan,Label
+Provinsi,Jenis_Poliklinik,Status_Kunjungan_Peserta,Kode_Diagnosis,Nama_Diagnosis,Kode_Diagnosis_Detail,Nama_Diagnosis_Detail,Jenis_Kunjungan,Label
 31,13,98,9999,,9999,9999,2,1
 17,12,98,9999,,9999,9999,2,1
 32,13,98,9999,,9999,9999,2,1

@@ -13,8 +13,8 @@
       margin: 0;
       padding: 20px;
     }
-    .login {
-      max-width: 600px;
+    .form-container {
+      max-width: 700px;
       margin: auto;
       background: #fff;
       padding: 20px;
@@ -46,97 +46,109 @@
     button:hover {
       background-color: #2980b9;
     }
-    table {
-      width: 100%;
+    .result {
       margin-top: 20px;
-      border-collapse: collapse;
-    }
-    table, th, td {
-      border: 1px solid #ddd;
-    }
-    th, td {
-      text-align: left;
-      padding: 8px;
-    }
-    th {
+      padding: 10px;
       background-color: #f2f2f2;
-    }
-    .prediction-results {
-      margin-top: 20px;
-      padding: 15px;
-      background-color: #ecf0f1;
       border-radius: 5px;
-    }
-    .prediction-results h3 {
-      margin-bottom: 10px;
     }
   </style>
 </head>
-
 <body>
-  <div class="login">
+  <div class="form-container">
     <h1>BPJS Visit Type Prediction</h1>
-
-    <!-- Main Input Form -->
-    <form action="/predict" method="POST">
-      <label for="Nama_Provinsi">Pilih Provinsi:</label>
-      <select name="Nama_Provinsi" id="Nama_Provinsi" required>
-          <option value="">-- Pilih Provinsi --</option>
-          {% for provinsi in provinsi_list %}
-              <option value="{{ provinsi }}" {% if provinsi == Nama_Provinsi %}selected{% endif %}>{{ provinsi }}</option>
-          {% endfor %}
-      </select>
-      <br><br>
-  
+    <form id="predictionForm" action="/predict" method="POST">
       <label for="Jenis_Poliklinik">Pilih Jenis Poliklinik:</label>
       <select name="Jenis_Poliklinik" id="Jenis_Poliklinik" required>
-          <option value="">-- Pilih Jenis Poliklinik --</option>
-          {% for poliklinik in poliklinik_list %}
-              <option value="{{ poliklinik }}" {% if poliklinik == Jenis_Poliklinik %}selected{% endif %}>{{ poliklinik }}</option>
-          {% endfor %}
+        <option value="">-- Pilih Jenis Poliklinik --</option>
+        {% for poliklinik in poliklinik_list %}
+        <option value="{{ poliklinik }}">{{ poliklinik }}</option>
+        {% endfor %}
       </select>
-      <br><br>
-  
+
       <label for="Nama_Diagnosis">Pilih Diagnosis:</label>
       <select name="Nama_Diagnosis" id="Nama_Diagnosis" required>
-          <option value="">-- Pilih Diagnosis --</option>
-          {% for diagnosis in diagnosis_list %}
-              <option value="{{ diagnosis }}" {% if diagnosis == Nama_Diagnosis %}selected{% endif %}>{{ diagnosis }}</option>
-          {% endfor %}
+        <option value="">-- Pilih Diagnosis --</option>
+        {% for diagnosis in diagnosis_list %}
+        <option value="{{ diagnosis }}">{{ diagnosis }}</option>
+        {% endfor %}
       </select>
-      <br><br>
-  
+
       <label for="Jenis_Kunjungan">Pilih Jenis Kunjungan:</label>
       <select name="Jenis_Kunjungan" id="Jenis_Kunjungan" required>
-          <option value="">-- Pilih Jenis Kunjungan --</option>
-          {% for jenis in jenis_kunjungan_list %}
-              <option value="{{ jenis }}" {% if jenis == Jenis_Kunjungan %}selected{% endif %}>{{ jenis }}</option>
-          {% endfor %}
+        <option value="">-- Pilih Jenis Kunjungan --</option>
+        {% for jenis in jenis_kunjungan_list %}
+        <option value="{{ jenis }}">{{ jenis }}</option>
+        {% endfor %}
       </select>
-      <br><br>
-  
+
+      <label for="Provinsi_faskes_tujuan_rujukan">Pilih Provinsi Faskes:</label>
+      <select name="Provinsi_faskes_tujuan_rujukan" id="Provinsi_faskes_tujuan_rujukan" required>
+        <option value="">-- Pilih Provinsi --</option>
+        {% for provinsi in provinsi_list %}
+        <option value="{{ provinsi }}">{{ provinsi }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="Kepemilikan_faskes">Pilih Kepemilikan Faskes:</label>
+      <select name="Kepemilikan_faskes" id="Kepemilikan_faskes" required>
+        <option value="">-- Pilih Kepemilikan Faskes --</option>
+        {% for kepemilikan in kepemilikan_list %}
+        <option value="{{ kepemilikan }}">{{ kepemilikan }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="Jenis_faskes">Pilih Jenis Faskes:</label>
+      <select name="Jenis_faskes" id="Jenis_faskes" required>
+        <option value="">-- Pilih Jenis Faskes --</option>
+        {% for jenis_faskes in jenis_faskes_list %}
+        <option value="{{ jenis_faskes }}">{{ jenis_faskes }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="Tipe_faskes">Pilih Tipe Faskes:</label>
+      <select name="Tipe_faskes" id="Tipe_faskes" required>
+        <option value="">-- Pilih Tipe Faskes --</option>
+        {% for tipe_faskes in tipe_faskes_list %}
+        <option value="{{ tipe_faskes }}">{{ tipe_faskes }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="Poli_faskes">Pilih Poli Faskes:</label>
+      <select name="Poli_faskes" id="Poli_faskes" required>
+        <option value="">-- Pilih Poli Faskes --</option>
+        {% for poli_faskes in poli_faskes_list %}
+        <option value="{{ poli_faskes }}">{{ poli_faskes }}</option>
+        {% endfor %}
+      </select>
+
       <button type="submit">Prediksi</button>
     </form>
-  
 
-    <br><br>
-    {% if prediction_results %}
-      <div class="prediction-results">
-        <h3>Prediction Results:</h3>
-        <table>
-          <tr>
-            <th>Visit Type</th>
-            <th>Number of Patients</th>
-          </tr>
-          {% for visit_type, count in prediction_results.items() %}
-          <tr>
-            <td>{{ visit_type }}</td>
-            <td>{{ count }} kunjungan</td>
-          </tr>
-          {% endfor %}
-        </table>
-      </div>
-    {% endif %}
+    <!-- Div untuk menampilkan hasil prediksi -->
+    <div class="result" id="resultDiv" style="display: none;">
+      <h3>Hasil Prediksi:</h3>
+      <p id="predictionResult"></p>
+    </div>
   </div>
+
+  <script>
+    document.getElementById("predictionForm").addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(this);
+      const response = await fetch("/predict", {
+        method: "POST",
+        body: formData
+      });
+
+      const result = await response.json(); // Mendapatkan hasil prediksi dalam format JSON
+      const resultDiv = document.getElementById("resultDiv");
+      const predictionResult = document.getElementById("predictionResult");
+
+      resultDiv.style.display = "block";  // Menampilkan div hasil
+      predictionResult.textContent = result.prediction;  // Menampilkan hasil prediksi
+    });
+  </script>
 </body>
 </html>

@@ -52,6 +52,31 @@
       background-color: #f2f2f2;
       border-radius: 5px;
     }
+    table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
+
   </style>
 </head>
 <body>
@@ -126,29 +151,35 @@
     </form>
 
     <!-- Div untuk menampilkan hasil prediksi -->
-    <div class="result" id="resultDiv" style="display: none;">
-      <h3>Hasil Prediksi:</h3>
-      <p id="predictionResult"></p>
-    </div>
+{% if prediction_text or selected_features %}
+<div class="result" id="resultDiv">
+  <h3>Hasil Prediksi:</h3>
+
+  <!-- Tampilkan prediction_text sebagai kalimat biasa -->
+  <p id="predictionText">{{ prediction_text }}</p>
+
+  <!-- Tampilkan selected_features sebagai tabel -->
+  {% if selected_features %}
+  <h4>Detail Fitur yang Dipilih:</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Fitur</th>
+        <th>Inputan</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for key, value in selected_features.items() %}
+      <tr>
+        <td>{{ key }}</td>
+        <td>{{ value }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endif %}
+</div>
+{% endif %}
   </div>
-
-  <script>
-    document.getElementById("predictionForm").addEventListener("submit", async function(event) {
-      event.preventDefault();
-
-      const formData = new FormData(this);
-      const response = await fetch("/predict", {
-        method: "POST",
-        body: formData
-      });
-
-      const result = await response.json(); // Mendapatkan hasil prediksi dalam format JSON
-      const resultDiv = document.getElementById("resultDiv");
-      const predictionResult = document.getElementById("predictionResult");
-
-      resultDiv.style.display = "block";  // Menampilkan div hasil
-      predictionResult.textContent = result.prediction;  // Menampilkan hasil prediksi
-    });
-  </script>
 </body>
 </html>
